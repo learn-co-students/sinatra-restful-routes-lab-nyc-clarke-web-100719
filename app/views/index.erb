@@ -1,0 +1,9 @@
+<div>
+    <% @recipes.each {|rec| %>
+    <p> Name: <%= rec.name %> <br>
+        Ingredients: <%= rec.ingredients %> <br>
+        Cook Time: <%= rec.cook_time %> <br>
+        <a href="/recipes/<%= rec.id %>">Link</a>
+    </p> 
+    <%  } %>
+<div>
