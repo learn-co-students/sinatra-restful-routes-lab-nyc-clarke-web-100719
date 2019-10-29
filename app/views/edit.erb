@@ -1,0 +1,13 @@
+<h1><%=@recipe.name%></h1>
+
+<h4><%=@recipe.ingredients%></h4>
+
+<h4><%=@recipe.cook_time%> minutes</h4>
+
+<form action="/recipes/<%=@recipe.id%>" method="post">
+<input id="hidden" type="hidden" name="_method" value="patch"><br>
+    Name: <br><br><input type="text" name="name"><br><br>
+    Ingredients: <br><br><textarea rows="4" cols="50" name="ingredients"></textarea><br><br>
+    Cook Time: <br><br><input type="number" name="cook_time"><br><br>
+<button type="submit" value="change">change</button>
+</form>
